@@ -16,12 +16,13 @@ class ProductCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      color: Colors.grey.withOpacity(0.4),
       child: Column(
         children: [
           Container(
-            height: 140,
+            height: 170,
             child: Image.network(
-                height: 100,
+              height: 100,
                 fit: BoxFit.cover,
                 product.img.toString()
             ),
@@ -41,6 +42,7 @@ class ProductCard extends StatelessWidget {
                 Text('Price: ${product.unitPrice} | Quantity: ${product.qty}',
                   style: TextStyle(
                     fontSize: 16,
+                    color: Colors.grey.shade700,
                   ),
                 ),
               ],
@@ -54,14 +56,14 @@ class ProductCard extends StatelessWidget {
               children: [
                 IconButton(
                     onPressed: onEdit,
-                    icon: Icon(Icons.edit, size: 20, color: Colors.orange)
+                    icon: Icon(Icons.edit, size: 25, color: Colors.orange)
                 ),
 
                 SizedBox(width: 10),
 
                 IconButton(
                     onPressed: onDelete,
-                    icon: Icon(Icons.delete, size: 20, color: Colors.red)
+                    icon: Icon(Icons.delete, size: 25, color: Colors.red)
                 ),
               ],
             ),
